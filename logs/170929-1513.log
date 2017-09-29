@@ -1,0 +1,1657 @@
+using CUDA on GPU 0...	
+file version LSTM tools	
+DataLoader loading json file: 	/home/yzw/dataset/Youtube/feature/new_lv/info_1th.json	
+vocab size is 12593	
+DataLoader loading h5 file: 	/home/yzw/dataset/Youtube/new_feat/googlenet-pl5-10f-new.h5	
+read 1970 videos of size 10x1024	
+DataLoader loading h5 file: 	/home/yzw/dataset/Youtube/new_feat/googlenet-in5b-10f-new.h5	
+read local features of size 10x1024x49	
+max sequence length in data is 12	
+locading topic file	
+get word word_distribution....	
+preparing word distribution	
+word distribution samples	
+train table label index is	46759	
+assigned 1200 images to split train	
+assigned 670 images to split test	
+assigned 100 images to split val	
+vocab size:	12593	
+learningRate:	0.0002	sentence_length:	12	
+feat_seq_length	10	
+batchsize:	64	
+Current time info: 	170929-1513	
+reason weight is 	0	
+build double state model with attention....	
+{
+  feat_seq_length : 10
+  att_length : 49
+  vocabsize : 12593
+  att_feat_size : 1024
+  topic_size : 12593
+  hiddensize : 512
+  sentence_length : 12
+  featsize : 1024
+}
+.......................LSTM Soft Attention with Double State Parameters..............	
+{
+  att_type : 3
+  input_size : 1024
+  att_hid_size : 100
+  att_feat_size : 1024
+  rnn_size : 512
+  att_length : 49
+  topic_size : 12593
+}
+state attention with content	
+base attention model...	
+.......................LSTM Language Model with attention parameters..............	
+{
+  att_hid_size : 100
+  input_size : 512
+  att_length : 10
+  rnn_size : 1024
+  att_feat_size : 1024
+  output_size : 12594
+}
+base attention model...	
+done....	
+total number of parameters in LM: 	36551564	
+constructing clones inside the sequence LSTM model	
+The number of data for a epoch is 	46759	
+10 (epoch 1-46759), train_loss = 5.45892296,dis_loss = 0.00000000, grad/param norm = 9.6242e-04, time/batch = 0.5924s	
+20 (epoch 1-46759), train_loss = 4.93658988,dis_loss = 0.00000000, grad/param norm = 7.4872e-04, time/batch = 0.4796s	
+30 (epoch 1-46759), train_loss = 4.84802851,dis_loss = 0.00000000, grad/param norm = 6.5706e-04, time/batch = 0.6161s	
+40 (epoch 1-46759), train_loss = 4.73589790,dis_loss = 0.00000000, grad/param norm = 6.8760e-04, time/batch = 0.3319s	
+50 (epoch 1-46759), train_loss = 4.30577205,dis_loss = 0.00000000, grad/param norm = 7.1711e-04, time/batch = 0.3243s	
+60 (epoch 1-46759), train_loss = 4.12728331,dis_loss = 0.00000000, grad/param norm = 6.3428e-04, time/batch = 0.2998s	
+70 (epoch 1-46759), train_loss = 4.28383496,dis_loss = 0.00000000, grad/param norm = 6.6360e-04, time/batch = 0.2952s	
+80 (epoch 1-46759), train_loss = 4.03908608,dis_loss = 0.00000000, grad/param norm = 6.3436e-04, time/batch = 0.2988s	
+90 (epoch 1-46759), train_loss = 4.44474795,dis_loss = 0.00000000, grad/param norm = 6.2397e-04, time/batch = 0.3119s	
+100 (epoch 1-46759), train_loss = 4.29239092,dis_loss = 0.00000000, grad/param norm = 6.3618e-04, time/batch = 0.2940s	
+110 (epoch 1-46759), train_loss = 4.12854944,dis_loss = 0.00000000, grad/param norm = 6.7277e-04, time/batch = 0.3447s	
+120 (epoch 1-46759), train_loss = 4.09440528,dis_loss = 0.00000000, grad/param norm = 6.3189e-04, time/batch = 0.2911s	
+130 (epoch 1-46759), train_loss = 4.03692938,dis_loss = 0.00000000, grad/param norm = 6.3918e-04, time/batch = 0.3425s	
+140 (epoch 1-46759), train_loss = 4.21317145,dis_loss = 0.00000000, grad/param norm = 6.4564e-04, time/batch = 0.3037s	
+150 (epoch 1-46759), train_loss = 3.94738269,dis_loss = 0.00000000, grad/param norm = 6.1395e-04, time/batch = 0.3018s	
+160 (epoch 1-46759), train_loss = 4.16822512,dis_loss = 0.00000000, grad/param norm = 6.1617e-04, time/batch = 0.3316s	
+170 (epoch 1-46759), train_loss = 4.21522417,dis_loss = 0.00000000, grad/param norm = 6.3103e-04, time/batch = 0.2918s	
+180 (epoch 1-46759), train_loss = 3.87013777,dis_loss = 0.00000000, grad/param norm = 6.2275e-04, time/batch = 0.3357s	
+190 (epoch 1-46759), train_loss = 3.88692764,dis_loss = 0.00000000, grad/param norm = 6.4493e-04, time/batch = 0.3199s	
+200 (epoch 1-46759), train_loss = 3.86662347,dis_loss = 0.00000000, grad/param norm = 6.2736e-04, time/batch = 0.2967s	
+210 (epoch 1-46759), train_loss = 3.78987613,dis_loss = 0.00000000, grad/param norm = 6.4272e-04, time/batch = 0.3337s	
+220 (epoch 1-46759), train_loss = 3.93479635,dis_loss = 0.00000000, grad/param norm = 6.2096e-04, time/batch = 0.3015s	
+230 (epoch 1-46759), train_loss = 4.08060758,dis_loss = 0.00000000, grad/param norm = 6.5191e-04, time/batch = 0.3027s	
+240 (epoch 1-46759), train_loss = 3.87686185,dis_loss = 0.00000000, grad/param norm = 6.6470e-04, time/batch = 0.3022s	
+250 (epoch 1-46759), train_loss = 3.71936984,dis_loss = 0.00000000, grad/param norm = 6.5199e-04, time/batch = 0.2959s	
+260 (epoch 1-46759), train_loss = 3.84559702,dis_loss = 0.00000000, grad/param norm = 6.7925e-04, time/batch = 0.3161s	
+270 (epoch 1-46759), train_loss = 3.76786204,dis_loss = 0.00000000, grad/param norm = 6.2763e-04, time/batch = 0.3419s	
+280 (epoch 1-46759), train_loss = 4.08332668,dis_loss = 0.00000000, grad/param norm = 6.3676e-04, time/batch = 0.3392s	
+290 (epoch 1-46759), train_loss = 3.76154636,dis_loss = 0.00000000, grad/param norm = 6.3875e-04, time/batch = 0.2907s	
+300 (epoch 1-46759), train_loss = 3.92708118,dis_loss = 0.00000000, grad/param norm = 6.6127e-04, time/batch = 0.3063s	
+310 (epoch 1-46759), train_loss = 3.74884682,dis_loss = 0.00000000, grad/param norm = 6.6454e-04, time/batch = 0.2997s	
+320 (epoch 1-46759), train_loss = 3.34759688,dis_loss = 0.00000000, grad/param norm = 6.6098e-04, time/batch = 0.3236s	
+330 (epoch 1-46759), train_loss = 3.78701347,dis_loss = 0.00000000, grad/param norm = 6.5297e-04, time/batch = 0.3375s	
+340 (epoch 1-46759), train_loss = 3.98395784,dis_loss = 0.00000000, grad/param norm = 6.4931e-04, time/batch = 0.2860s	
+350 (epoch 1-46759), train_loss = 3.51869883,dis_loss = 0.00000000, grad/param norm = 6.5319e-04, time/batch = 0.2899s	
+360 (epoch 1-46759), train_loss = 3.52047493,dis_loss = 0.00000000, grad/param norm = 6.3686e-04, time/batch = 0.3023s	
+370 (epoch 1-46759), train_loss = 3.93453751,dis_loss = 0.00000000, grad/param norm = 6.6453e-04, time/batch = 0.2980s	
+380 (epoch 1-46759), train_loss = 3.72121262,dis_loss = 0.00000000, grad/param norm = 6.7993e-04, time/batch = 0.3036s	
+390 (epoch 1-46759), train_loss = 3.85371992,dis_loss = 0.00000000, grad/param norm = 6.7347e-04, time/batch = 0.2876s	
+400 (epoch 1-46759), train_loss = 3.43573975,dis_loss = 0.00000000, grad/param norm = 6.5504e-04, time/batch = 0.3202s	
+410 (epoch 1-46759), train_loss = 3.52838991,dis_loss = 0.00000000, grad/param norm = 6.6412e-04, time/batch = 0.2934s	
+420 (epoch 1-46759), train_loss = 3.40721345,dis_loss = 0.00000000, grad/param norm = 6.6801e-04, time/batch = 0.2954s	
+430 (epoch 1-46759), train_loss = 3.67827318,dis_loss = 0.00000000, grad/param norm = 7.0172e-04, time/batch = 0.2947s	
+440 (epoch 1-46759), train_loss = 3.67203652,dis_loss = 0.00000000, grad/param norm = 6.6989e-04, time/batch = 0.3049s	
+450 (epoch 1-46759), train_loss = 3.39362523,dis_loss = 0.00000000, grad/param norm = 6.6348e-04, time/batch = 0.2859s	
+460 (epoch 1-46759), train_loss = 3.34842468,dis_loss = 0.00000000, grad/param norm = 6.8227e-04, time/batch = 0.2888s	
+470 (epoch 1-46759), train_loss = 3.43964515,dis_loss = 0.00000000, grad/param norm = 7.1854e-04, time/batch = 0.3259s	
+480 (epoch 1-46759), train_loss = 3.59581704,dis_loss = 0.00000000, grad/param norm = 6.5917e-04, time/batch = 0.2886s	
+490 (epoch 1-46759), train_loss = 3.56359615,dis_loss = 0.00000000, grad/param norm = 6.8944e-04, time/batch = 0.2975s	
+500 (epoch 1-46759), train_loss = 3.82874089,dis_loss = 0.00000000, grad/param norm = 7.0663e-04, time/batch = 0.2933s	
+510 (epoch 1-46759), train_loss = 3.54562179,dis_loss = 0.00000000, grad/param norm = 6.9830e-04, time/batch = 0.2972s	
+520 (epoch 1-46759), train_loss = 3.55957057,dis_loss = 0.00000000, grad/param norm = 6.7621e-04, time/batch = 0.2812s	
+530 (epoch 1-46759), train_loss = 3.30854838,dis_loss = 0.00000000, grad/param norm = 6.9000e-04, time/batch = 0.2973s	
+540 (epoch 1-46759), train_loss = 3.60767422,dis_loss = 0.00000000, grad/param norm = 6.9321e-04, time/batch = 0.3345s	
+550 (epoch 1-46759), train_loss = 3.53853788,dis_loss = 0.00000000, grad/param norm = 6.8546e-04, time/batch = 0.3021s	
+560 (epoch 1-46759), train_loss = 3.59586657,dis_loss = 0.00000000, grad/param norm = 6.8189e-04, time/batch = 0.3516s	
+570 (epoch 1-46759), train_loss = 3.33806715,dis_loss = 0.00000000, grad/param norm = 6.7827e-04, time/batch = 0.2966s	
+580 (epoch 1-46759), train_loss = 3.17063755,dis_loss = 0.00000000, grad/param norm = 6.9456e-04, time/batch = 0.3313s	
+590 (epoch 1-46759), train_loss = 3.55581392,dis_loss = 0.00000000, grad/param norm = 7.2635e-04, time/batch = 0.2992s	
+600 (epoch 1-46759), train_loss = 3.48064054,dis_loss = 0.00000000, grad/param norm = 6.8450e-04, time/batch = 0.3254s	
+610 (epoch 1-46759), train_loss = 3.38139340,dis_loss = 0.00000000, grad/param norm = 6.8685e-04, time/batch = 0.2959s	
+620 (epoch 1-46759), train_loss = 3.50619724,dis_loss = 0.00000000, grad/param norm = 7.0951e-04, time/batch = 0.2957s	
+630 (epoch 1-46759), train_loss = 3.51506607,dis_loss = 0.00000000, grad/param norm = 6.9477e-04, time/batch = 0.3240s	
+640 (epoch 1-46759), train_loss = 3.54002703,dis_loss = 0.00000000, grad/param norm = 6.9849e-04, time/batch = 0.3349s	
+650 (epoch 1-46759), train_loss = 3.57724177,dis_loss = 0.00000000, grad/param norm = 7.1384e-04, time/batch = 0.2918s	
+660 (epoch 1-46759), train_loss = 3.20457261,dis_loss = 0.00000000, grad/param norm = 6.7371e-04, time/batch = 0.3013s	
+670 (epoch 1-46759), train_loss = 3.38184916,dis_loss = 0.00000000, grad/param norm = 6.8337e-04, time/batch = 0.2973s	
+680 (epoch 1-46759), train_loss = 3.19924455,dis_loss = 0.00000000, grad/param norm = 6.8602e-04, time/batch = 0.3444s	
+690 (epoch 1-46759), train_loss = 3.28827509,dis_loss = 0.00000000, grad/param norm = 7.0497e-04, time/batch = 0.2965s	
+700 (epoch 1-46759), train_loss = 3.48812275,dis_loss = 0.00000000, grad/param norm = 7.0316e-04, time/batch = 0.2923s	
+710 (epoch 1-46759), train_loss = 3.15075806,dis_loss = 0.00000000, grad/param norm = 6.8030e-04, time/batch = 0.2962s	
+720 (epoch 1-46759), train_loss = 3.35526024,dis_loss = 0.00000000, grad/param norm = 7.0965e-04, time/batch = 0.3347s	
+730 (epoch 1-46759), train_loss = 3.56942921,dis_loss = 0.00000000, grad/param norm = 7.2146e-04, time/batch = 0.2928s	
+train data is shuffled...	
+image vid1301: a man is playing with a ball	
+image vid1302: a man is riding a motorcycle	
+image vid1303: a cat is playing with a cat	
+image vid1304: a man is talking on a man	
+image vid1305: a man is running on a stage	
+image vid1306: a man is playing a gun	
+image vid1307: a woman is eating a piece of a knife	
+image vid1308: a man is doing a woman	
+image vid1309: a woman is eating her hair	
+image vid1310: a woman is slicing a potato	
+image vid1311: a cat is playing with a cat	
+image vid1312: a man is playing a guitar	
+image vid1313: a man is riding a horse	
+image vid1314: a man is running	
+image vid1315: a man is riding a car	
+image vid1316: a man is cutting a piece of a knife	
+image vid1317: a man is dancing	
+image vid1318: a man is dancing	
+image vid1319: a man is riding a horse	
+image vid1320: a man is playing a guitar	
+image vid1321: a man is playing with a ball	
+image vid1322: a person is slicing a potato	
+image vid1323: a man is playing a guitar	
+image vid1324: a dog is playing with a ball	
+image vid1325: a man is doing a car	
+image vid1326: a man is riding a car	
+image vid1327: a dog is playing with a dog	
+image vid1328: a woman is cooking a bowl	
+image vid1329: a man is running	
+image vid1330: a man is talking on a phone	
+image vid1331: a man is playing a ball	
+image vid1332: a man is riding a horse	
+image vid1333: a man is cutting a man	
+image vid1334: a man is slicing a potato	
+image vid1335: a man is riding a horse	
+image vid1336: a polar bear is walking	
+image vid1337: a dog is running	
+image vid1338: a man is playing a guitar	
+image vid1339: a man is riding a motorcycle	
+image vid1340: a cat is playing with a ball	
+image vid1341: a man is riding a horse	
+image vid1342: a man is slicing a potato	
+image vid1343: a man is cutting a piece of meat	
+image vid1344: a man is cutting a piece of a knife	
+image vid1345: a man is cutting a piece of meat	
+image vid1346: a man is driving a car	
+image vid1347: a man is playing with a ball	
+image vid1348: a man is cutting a potato	
+image vid1349: a man is cutting a potato	
+image vid1350: a man is cutting a potato	
+image vid1351: a man is riding a horse	
+image vid1352: a cat is playing with a ball	
+image vid1353: a man is playing a guitar	
+image vid1354: a man is playing a guitar	
+image vid1355: a man is riding a horse	
+image vid1356: a man is playing a guitar	
+image vid1357: a man is driving a car	
+image vid1358: a man is running	
+image vid1359: a dog is playing with a ball	
+image vid1360: a man is riding a horse	
+image vid1361: a man is cutting a knife	
+image vid1362: a man is shooting a gun	
+image vid1363: a cat is playing with a ball	
+image vid1364: a man is running	
+image vid1365: a man is dancing	
+image vid1366: a man is riding a horse	
+image vid1367: a man is playing a guitar	
+image vid1368: a woman is doing a large	
+image vid1369: a cat is playing with a ball	
+image vid1370: a man is cooking	
+image vid1371: a man is playing with a ball	
+image vid1372: a man is running on a stage	
+image vid1373: a man is talking on a phone	
+image vid1374: a man is pouring rice	
+image vid1375: a man is cooking a pot	
+image vid1376: a man is cooking	
+image vid1377: a man is pouring a pot	
+image vid1378: a man is cutting a bowl	
+image vid1379: a man is cooking a bowl	
+image vid1380: a man is cutting a piece of a bowl	
+image vid1381: a man is cutting a piece of a bowl	
+image vid1382: two men are dancing	
+image vid1383: a woman is doing a dog	
+image vid1384: a woman is cooking a bowl	
+image vid1385: a man is dancing	
+image vid1386: a man is riding a motorcycle	
+image vid1387: a man is running	
+image vid1388: a man is playing a gun	
+image vid1389: a baby is playing with a baby	
+image vid1390: a dog is playing with a ball	
+image vid1391: a woman is cutting a piece of a bowl	
+image vid1392: a woman is eating a piece of a fish	
+image vid1393: a man is running	
+image vid1394: a cat is playing with a ball	
+image vid1395: a man is playing a guitar	
+image vid1396: a man is running on a ball	
+image vid1397: a dog is playing with a ball	
+image vid1398: a man is playing with a guitar	
+image vid1399: a panda is playing with a ball	
+image vid1400: a man is playing a guitar	
+image vid1401: a man is riding a horse	
+image vid1402: a boy is playing a guitar	
+image vid1403: a man is playing a guitar	
+image vid1404: a man is riding a bicycle	
+image vid1405: a man is doing a fish	
+image vid1406: a woman is putting a pan	
+image vid1407: a cat is playing with a knife	
+image vid1408: a man is playing with a ball	
+image vid1409: a woman is talking on a phone	
+image vid1410: a man is slicing a potato	
+image vid1411: a man is riding a horse	
+image vid1412: a man is playing with a ball	
+image vid1413: a baby is playing with a ball	
+image vid1414: a dog is running	
+image vid1415: a man is driving a car	
+image vid1416: a cat is playing with a ball	
+image vid1417: a man is cooking	
+image vid1418: a dog is playing with a ball	
+image vid1419: a man is dancing	
+image vid1420: a woman is cutting a potato	
+image vid1421: a man is cooking a bowl	
+image vid1422: a cat is playing with a cat	
+image vid1423: a woman is cutting a potato	
+image vid1424: a man is riding a horse	
+image vid1425: a man is riding a motorcycle	
+image vid1426: a woman is cooking	
+image vid1427: a man is riding a motorcycle	
+image vid1428: a woman is cutting a bowl	
+image vid1429: a woman is slicing a potato	
+image vid1430: a woman is slicing a carrot	
+image vid1431: a man is cutting a potato	
+image vid1432: a dog is playing with a ball	
+image vid1433: a dog is playing with a ball	
+image vid1434: a man is playing a guitar	
+image vid1435: a man is walking on a tree	
+image vid1436: a man is eating a tree	
+image vid1437: a man is cutting a potato	
+image vid1438: a dog is playing with a car	
+image vid1439: a man is playing a guitar	
+image vid1440: a woman is riding a horse	
+image vid1441: a woman is cutting a fish	
+image vid1442: a man is cooking	
+image vid1443: a man is talking on a stage	
+image vid1444: a man is cutting a bowl	
+image vid1445: a woman is slicing a bowl	
+image vid1446: a man is riding a horse	
+image vid1447: a man is riding a horse	
+image vid1448: a dog is riding a horse	
+image vid1449: a woman is playing with a ball	
+image vid1450: a man is running on a car	
+image vid1451: a man is cutting a piece of a knife	
+image vid1452: a man is riding a horse	
+image vid1453: a man is riding a horse	
+image vid1454: a man is riding a motorcycle	
+image vid1455: a man is playing with a ball	
+image vid1456: a man is running	
+image vid1457: a man is running	
+image vid1458: a man is cooking	
+image vid1459: a woman is doing a piece of a bowl	
+image vid1460: a man is playing a guitar	
+image vid1461: a baby is playing with a ball	
+image vid1462: a dog is playing with a ball	
+image vid1463: a man is riding a motorcycle	
+image vid1464: a man is running	
+image vid1465: a man is playing a guitar	
+image vid1466: a man is riding a horse	
+image vid1467: a man is shooting a gun	
+image vid1468: a woman is slicing a bowl	
+image vid1469: a woman is cooking	
+image vid1470: a woman is cutting a potato	
+image vid1471: a man is playing a guitar	
+image vid1472: a man is cutting a potato	
+image vid1473: a baby is playing with a knife	
+image vid1474: a man is playing with a knife	
+image vid1475: a cat is eating	
+image vid1476: a man is playing with a ball	
+image vid1477: a man is running	
+image vid1478: a man is cutting a potato	
+image vid1479: a person is cutting a potato	
+image vid1480: a woman is slicing a potato	
+image vid1481: a woman is slicing a potato	
+image vid1482: a woman is slicing a bowl	
+image vid1483: a woman is slicing a carrot	
+image vid1484: a man is cutting a potato	
+image vid1485: a woman is cooking	
+image vid1486: a woman is cooking	
+image vid1487: a woman is cooking	
+image vid1488: a woman is cooking	
+image vid1489: a woman is slicing a carrot	
+image vid1490: a woman is cooking	
+image vid1491: a woman is slicing a carrot	
+image vid1492: a woman is cooking	
+image vid1493: a woman is slicing a potato	
+image vid1494: a woman is slicing a potato	
+image vid1495: a woman is slicing a potato	
+image vid1496: a woman is slicing a potato	
+image vid1497: a woman is cooking a bowl	
+image vid1498: a woman is slicing a potato	
+image vid1499: a woman is slicing a piece of meat	
+image vid1500: a man is cooking a pan	
+image vid1501: a man is riding a motorcycle	
+image vid1502: a man is playing a guitar	
+image vid1503: a woman is cutting a potato	
+image vid1504: a woman is cutting a potato	
+image vid1505: a woman is slicing a potato	
+image vid1506: a woman is cooking a bowl	
+image vid1507: a woman is cutting a potato	
+image vid1508: a woman is cooking	
+image vid1509: a man is riding a motorcycle	
+image vid1510: a man is cutting a bowl	
+image vid1511: a man is cutting a bowl	
+image vid1512: a man is cutting a piece of a bowl	
+image vid1513: a man is playing with a knife	
+image vid1514: a man is riding a horse	
+image vid1515: a man is cutting a piece of a knife	
+image vid1516: a man is playing a guitar	
+image vid1517: a dog is playing with a dog	
+image vid1518: a woman is cutting a potato	
+image vid1519: a man is riding a bicycle	
+image vid1520: a woman is playing with a ball	
+image vid1521: a woman is playing with a ball	
+image vid1522: a man is shooting a gun	
+image vid1523: a man is riding a horse	
+image vid1524: a woman is playing with a ball	
+image vid1525: a cat is playing with a ball	
+image vid1526: a dog is riding a horse	
+image vid1527: a man is playing a flute	
+image vid1528: a man is playing a guitar	
+image vid1529: a man is doing a piece of a pan	
+image vid1530: a woman is cutting a meat	
+image vid1531: a man is running	
+image vid1532: a man is running on a beach	
+image vid1533: a man is talking on a phone	
+image vid1534: a man is cutting a bowl	
+image vid1535: a man is slicing a bowl	
+image vid1536: a man is cooking a bowl	
+image vid1537: a man is shooting a gun	
+image vid1538: a man is playing with a ball	
+image vid1539: a man is dancing	
+image vid1540: a man is cutting a fish	
+image vid1541: a man is riding a horse	
+image vid1542: a woman is cutting a potato	
+image vid1543: a man is playing with a ball	
+image vid1544: a man is playing a guitar	
+image vid1545: a man is riding a horse	
+image vid1546: a man is cooking a knife	
+image vid1547: a man is slicing a potato	
+image vid1548: a man is cutting a potato	
+image vid1549: a man is cutting a potato	
+image vid1550: a woman is cutting a potato	
+image vid1551: a man is slicing a potato	
+image vid1552: a person is slicing a carrot	
+image vid1553: a man is cutting a potato	
+image vid1554: a woman is slicing a potato	
+image vid1555: a woman is slicing a potato	
+image vid1556: a man is doing a gun	
+image vid1557: a man is doing a car	
+image vid1558: a woman is cooking eggs	
+image vid1559: a boy is playing a ball	
+image vid1560: a dog is playing with a ball	
+image vid1561: a woman is slicing a potato	
+image vid1562: a man is slicing a potato	
+image vid1563: a dog is playing with a ball	
+image vid1564: a man is playing with a guitar	
+image vid1565: a man is riding a motorcycle	
+image vid1566: a man is playing a guitar	
+image vid1567: a man is riding a horse	
+image vid1568: a man is cooking a pan	
+image vid1569: a man is cutting a carrot	
+image vid1570: a woman is riding a horse	
+image vid1571: a man is riding a horse	
+image vid1572: a man is riding a horse	
+image vid1573: a man is riding a motorcycle	
+image vid1574: a man is riding a motorcycle	
+image vid1575: a man is slicing a potato	
+image vid1576: a man is riding a horse	
+image vid1577: a woman is cooking a pan	
+image vid1578: a man is cutting a carrot	
+image vid1579: a man is playing a guitar	
+image vid1580: a man is playing a guitar	
+image vid1581: a man is playing with a car	
+image vid1582: a woman is doing a woman	
+image vid1583: a man is cutting a potato	
+image vid1584: a man is riding a motorcycle	
+image vid1585: a woman is cooking a bowl	
+image vid1586: a man is playing with a ball	
+image vid1587: a cat is playing with a ball	
+image vid1588: a woman is singing	
+image vid1589: a dog is playing with a ball	
+image vid1590: a man is playing a guitar	
+image vid1591: a man is playing with a ball	
+image vid1592: a dog is playing with a ball	
+image vid1593: a baby is playing with a baby	
+image vid1594: a cat is playing with a knife	
+image vid1595: a dog is playing with a ball	
+image vid1596: a woman is cooking	
+image vid1597: a woman is cutting a piece of bread	
+image vid1598: a woman is cutting a piece of bread	
+image vid1599: a man is cutting a bread	
+image vid1600: a man is riding a horse	
+image vid1601: a man is riding a motorcycle	
+image vid1602: a man is riding a horse	
+image vid1603: a man is dancing on a stage	
+image vid1604: a man is playing with a toy	
+image vid1605: a man is cutting a potato	
+image vid1606: a dog is eating	
+image vid1607: a man is cutting a potato	
+image vid1608: a dog is playing with a ball	
+image vid1609: a boy is playing with a ball	
+image vid1610: a man is cutting a potato	
+image vid1611: a woman is dancing	
+image vid1612: a man is riding a motorcycle	
+image vid1613: a man is cutting a potato	
+image vid1614: a woman is cutting a bowl	
+image vid1615: a man is cutting a potato	
+image vid1616: a man is slicing a potato	
+image vid1617: a man is cooking	
+image vid1618: a dog is playing with a ball	
+image vid1619: a dog is riding a horse	
+image vid1620: a man is riding a gun	
+image vid1621: a man is cutting a paper	
+image vid1622: a man is cutting a piece of a bowl	
+image vid1623: a man is riding a motorcycle	
+image vid1624: a man is riding a motorcycle	
+image vid1625: a woman is riding a horse	
+image vid1626: a man is cutting a potato	
+image vid1627: a man is cutting a potato	
+image vid1628: a woman is doing a woman	
+image vid1629: a man is riding a car	
+image vid1630: a man is playing a guitar	
+image vid1631: a man is playing with a knife	
+image vid1632: a man is doing a man	
+image vid1633: a man is riding a bicycle	
+image vid1634: a man is playing a flute	
+image vid1635: a man is dancing on a stage	
+image vid1636: a man is cooking a pan	
+image vid1637: a man is cooking a bowl	
+image vid1638: a woman is cooking a bowl	
+image vid1639: a dog is playing with a ball	
+image vid1640: a man is doing a man	
+image vid1641: a dog is riding a horse	
+image vid1642: a man is riding a horse	
+image vid1643: a woman is riding a horse	
+image vid1644: a man is playing a guitar	
+image vid1645: a man is cutting a potato	
+image vid1646: a cat is playing with a ball	
+image vid1647: a man is riding a motorcycle	
+image vid1648: a girl is eating her hair	
+image vid1649: a cat is riding a horse	
+image vid1650: a dog is playing with a ball	
+image vid1651: a man is riding a horse	
+image vid1652: a man is playing with a ball	
+image vid1653: a man is playing with a ball	
+image vid1654: a dog is playing with a ball	
+image vid1655: a man is running	
+image vid1656: a dog is playing with a ball	
+image vid1657: a man is slicing a potato	
+image vid1658: a man is talking on a phone	
+image vid1659: a man is dancing	
+image vid1660: a woman is dancing	
+image vid1661: a man is running on a rope	
+image vid1662: a man is cutting a potato	
+image vid1663: a man is riding a horse	
+image vid1664: a man is pouring a bowl	
+image vid1665: a man is slicing a potato	
+image vid1666: a man is slicing a potato	
+image vid1667: a man is slicing a potato	
+image vid1668: a man is playing with a knife	
+image vid1669: a man is playing a keyboard	
+image vid1670: a man is cutting a piece of meat	
+image vid1671: a man is riding a motorcycle	
+image vid1672: a boy is playing with a ball	
+image vid1673: a man is playing a flute	
+image vid1674: a dog is playing with a ball	
+image vid1675: a woman is dancing	
+image vid1676: a boy is playing with a toy	
+image vid1677: a man is riding a horse	
+image vid1678: a panda is eating	
+image vid1679: a man is running	
+image vid1680: a woman is cutting a paper	
+image vid1681: a man is playing a guitar	
+image vid1682: a man is doing a man	
+image vid1683: a baby is laughing	
+image vid1684: a cat is playing with a cat	
+image vid1685: a man is playing a guitar	
+image vid1686: a man is riding a motorcycle	
+image vid1687: a dog is playing with a ball	
+image vid1688: a boy is playing with a ball	
+image vid1689: a man is riding a horse	
+image vid1690: a woman is cooking eggs	
+image vid1691: a man is riding a horse	
+image vid1692: a baby is dancing	
+image vid1693: a man is riding a car	
+image vid1694: a man is riding a horse	
+image vid1695: a man is cooking a bowl	
+image vid1696: a cat is playing with a ball	
+image vid1697: a dog is riding a horse	
+image vid1698: a cat is playing with a ball	
+image vid1699: a woman is cooking	
+image vid1700: a woman is cooking a bowl	
+image vid1701: a woman is cutting a bowl	
+image vid1702: a woman is cooking eggs	
+image vid1703: a woman is cutting a potato	
+image vid1704: a woman is cutting a potato	
+image vid1705: a woman is slicing a potato	
+image vid1706: a person is cutting a carrot	
+image vid1707: a man is doing a car	
+image vid1708: a man is playing a guitar	
+image vid1709: a man is playing with a knife	
+image vid1710: a dog is playing with a dog	
+image vid1711: a man is riding a car	
+image vid1712: a man is riding a car	
+image vid1713: a dog is running	
+image vid1714: a man is playing a flute	
+image vid1715: a woman is cutting a potato	
+image vid1716: a woman is putting her hair	
+image vid1717: a man is doing a woman	
+image vid1718: a panda is playing with a ball	
+image vid1719: a man is eating a piece of a piece of a piece	
+image vid1720: a man is eating a piece of a piece of a piece	
+image vid1721: a man is running	
+image vid1722: a man is cutting a potato	
+image vid1723: a man is playing with a car	
+image vid1724: a man is riding a horse	
+image vid1725: a man is doing a man	
+image vid1726: a woman is doing a box	
+image vid1727: a man is doing a man	
+image vid1728: a man is shooting a gun	
+image vid1729: a man is doing a ball	
+image vid1730: a woman is doing a ball	
+image vid1731: a man is riding a motorcycle	
+image vid1732: a man is dancing	
+image vid1733: a man is playing a guitar	
+image vid1734: a man is playing a guitar	
+image vid1735: a man is riding a horse	
+image vid1736: a man is playing a guitar	
+image vid1737: a man is doing a woman	
+image vid1738: a man is riding a horse	
+image vid1739: a man is playing a guitar	
+image vid1740: a woman is riding a horse	
+image vid1741: a man is riding a horse	
+image vid1742: a man is cutting a piece of meat	
+image vid1743: a man is cutting a piece of bread	
+image vid1744: a man is playing a piano	
+image vid1745: a man is playing a guitar	
+image vid1746: a man is cutting a potato	
+image vid1747: a woman is doing a woman	
+image vid1748: a cat is playing with a knife	
+image vid1749: a man is talking on a phone	
+image vid1750: two men are dancing	
+image vid1751: a man is cutting a potato	
+image vid1752: a man is slicing a potato	
+image vid1753: a man is riding a car	
+image vid1754: a man is riding a motorcycle	
+image vid1755: a man is playing a guitar	
+image vid1756: a man is cutting a potato	
+image vid1757: a woman is cutting a piece of a knife	
+image vid1758: a man is dancing	
+image vid1759: a woman is dancing	
+image vid1760: a man is playing with a knife	
+image vid1761: a man is riding a motorcycle	
+image vid1762: a man is running	
+image vid1763: a man is playing with a man	
+image vid1764: people are dancing	
+image vid1765: a man is cutting a potato	
+image vid1766: a man is cutting a gun	
+image vid1767: a man is doing a piece of a pan	
+image vid1768: a man is playing a guitar	
+image vid1769: a man is talking on a phone	
+image vid1770: a man is cooking a bowl	
+image vid1771: a dog is running	
+image vid1772: a man is cutting a potato	
+image vid1773: a dog is playing with a ball	
+image vid1774: a man is talking on a phone	
+image vid1775: a man is cutting a potato	
+image vid1776: a man is riding a horse	
+image vid1777: a man is playing with a man	
+image vid1778: a cat is playing with a cat	
+image vid1779: a man is cooking a pan	
+image vid1780: a dog is running	
+image vid1781: a man is running	
+image vid1782: a man is dancing	
+image vid1783: a monkey is eating a horse	
+image vid1784: a man is playing with a ball	
+image vid1785: a man is talking on a phone	
+image vid1786: a man is cooking a bowl	
+image vid1787: a woman is slicing a carrot	
+image vid1788: a man is playing a guitar	
+image vid1789: a man is cooking	
+image vid1790: a man is playing with a guitar	
+image vid1791: a man is riding a horse	
+image vid1792: a man is riding a motorcycle	
+image vid1793: a cat is playing with a ball	
+image vid1794: a woman is slicing a bowl	
+image vid1795: a woman is playing with a ball	
+image vid1796: a man is playing a guitar	
+image vid1797: a man is playing with a ball	
+image vid1798: a man is playing with a ball	
+image vid1799: a cat is playing with a ball	
+image vid1800: a man is riding a horse	
+image vid1801: a woman is riding a horse	
+image vid1802: a man is cooking	
+image vid1803: a man is playing with a gun	
+image vid1804: a man is playing a guitar	
+image vid1805: a man is shooting a gun	
+image vid1806: a woman is dancing	
+image vid1807: a monkey is walking	
+image vid1808: a man is driving a car	
+image vid1809: a man is doing a man	
+image vid1810: a woman is cutting a potato	
+image vid1811: a man is riding a motorcycle	
+image vid1812: a man is riding a horse	
+image vid1813: a man is driving a car	
+image vid1814: a man is riding a horse	
+image vid1815: a man is riding a horse	
+image vid1816: a woman is riding a pool	
+image vid1817: a panda is playing with a knife	
+image vid1818: a man is cutting a piece of a knife	
+image vid1819: a man is playing a man	
+image vid1820: a man is playing a guitar	
+image vid1821: a man is playing with a man	
+image vid1822: a cat is playing with a knife	
+image vid1823: a man is playing a guitar	
+image vid1824: a man is cutting a potato	
+image vid1825: a cat is playing with a ball	
+image vid1826: a man is riding a car	
+image vid1827: a woman is cooking meat	
+image vid1828: a man is playing with a ball	
+image vid1829: a man is playing with a ball	
+image vid1830: a man is riding a motorcycle	
+image vid1831: a man is riding a horse	
+image vid1832: two men are dancing	
+image vid1833: a man is riding a horse	
+image vid1834: a man is playing a piano	
+image vid1835: a panda is eating	
+image vid1836: a man is cutting a piece of a knife	
+image vid1837: a woman is doing her hair	
+image vid1838: a woman is playing with a ball	
+image vid1839: a man is playing with a gun	
+image vid1840: a man is playing with a guitar	
+image vid1841: a man is cutting a potato	
+image vid1842: a man is riding a motorcycle	
+image vid1843: a man is playing a gun	
+image vid1844: a cat is playing with a ball	
+image vid1845: a zebras are playing	
+image vid1846: a man is doing a man	
+image vid1847: a man is running	
+image vid1848: a plane is flying	
+image vid1849: a man is cutting a potato	
+image vid1850: a woman is dancing	
+image vid1851: a woman is riding a horse	
+image vid1852: a man is riding a horse	
+image vid1853: a man is flying a plane	
+image vid1854: a dog is playing with a ball	
+image vid1855: a man is cutting a potato	
+image vid1856: a man is playing with a knife	
+image vid1857: a woman is cutting a woman	
+image vid1858: a man is playing a guitar	
+image vid1859: a man is playing a guitar	
+image vid1860: a man is riding a car	
+image vid1861: a man is riding a motorcycle	
+image vid1862: a man is playing a flute	
+image vid1863: a dog is playing with a ball	
+image vid1864: a woman is cutting a knife	
+image vid1865: a baby is playing with a baby	
+image vid1866: a man is walking on a water	
+image vid1867: a man is dancing	
+image vid1868: a man is playing with a ball	
+image vid1869: a man is playing a guitar	
+image vid1870: a man is running	
+image vid1871: a man is doing a motorcycle	
+image vid1872: a man is cutting a gun	
+image vid1873: a man is playing with a ball	
+image vid1874: a boy is playing with a ball	
+image vid1875: a man is cutting a potato	
+image vid1876: a woman is cutting a potato	
+image vid1877: a woman is doing her hair	
+image vid1878: a man is cutting a man	
+image vid1879: a woman is doing her hair	
+image vid1880: a man is playing with a ball	
+image vid1881: a man is doing a man	
+image vid1882: a man is walking on a fish	
+image vid1883: a man is playing a guitar	
+image vid1884: a cat is playing with a ball	
+image vid1885: a man is riding a horse	
+image vid1886: a man is flying a water	
+image vid1887: a boy is running	
+image vid1888: a man is doing a motorcycle	
+image vid1889: a man is playing a guitar	
+image vid1890: a man is slicing a potato	
+image vid1891: a woman is cooking eggs	
+image vid1892: a woman is dancing	
+image vid1893: a man is riding a motorcycle	
+image vid1894: a man is doing a motorcycle	
+image vid1895: a man is playing a guitar	
+image vid1896: a man is playing a guitar	
+image vid1897: a man is riding a horse	
+image vid1898: a man is riding a motorcycle	
+image vid1899: a woman is dancing	
+image vid1900: a man is riding a horse	
+image vid1901: a man is riding a horse	
+image vid1902: a man is riding a horse	
+image vid1903: a man is playing with a ball	
+image vid1904: a woman is doing a woman	
+image vid1905: a man is riding a horse	
+image vid1906: a man is playing a guitar	
+image vid1907: a man is cutting a knife	
+image vid1908: a woman is cutting a fish	
+image vid1909: a monkey is playing with a ball	
+image vid1910: a man is cutting a potato	
+image vid1911: a cat is playing with a ball	
+image vid1912: a woman is cutting a bowl	
+image vid1913: a cat is playing with a ball	
+image vid1914: a man is riding a horse	
+image vid1915: a dog is playing with a ball	
+image vid1916: a man is riding a motorcycle	
+image vid1917: a man is cutting a potato	
+image vid1918: a man is riding a horse	
+image vid1919: a dog is playing with a ball	
+image vid1920: a dog is playing with a ball	
+image vid1921: a man is driving a car	
+image vid1922: a man is playing with a ball	
+image vid1923: a man is riding a horse	
+image vid1924: a man is playing with a woman	
+image vid1925: a cat is playing with a ball	
+image vid1926: a woman is cutting a fish	
+image vid1927: a man is running on a rope	
+image vid1928: a woman is cooking	
+image vid1929: a man is slicing a potato	
+image vid1930: a man is cutting a carrot	
+image vid1931: a man is cutting a piece of bread	
+image vid1932: a man is playing with a dog	
+image vid1933: a man is cutting a potato	
+image vid1934: a man is playing a flute	
+image vid1935: a boy is playing with a ball	
+image vid1936: a man is cutting a potato	
+image vid1937: a man is dancing	
+image vid1938: a cat is playing with a ball	
+image vid1939: a man is cutting a piece of a knife	
+image vid1940: a man is playing a piano	
+image vid1941: a man is doing a gun	
+image vid1942: a man is slicing a potato	
+image vid1943: a man is slicing a potato	
+image vid1944: a man is slicing a potato	
+image vid1945: a man is riding a pool	
+image vid1946: a man is riding a gun	
+image vid1947: a man is riding a motorcycle	
+image vid1948: a man is riding a car	
+image vid1949: a man is shooting a gun	
+image vid1950: a woman is riding a horse	
+image vid1951: a man is riding a horse	
+image vid1952: a man is cutting a bowl	
+image vid1953: a woman is doing a man	
+image vid1954: a woman is cutting a piece of a knife	
+image vid1955: a man is talking on a phone	
+image vid1956: a man is doing a man	
+image vid1957: a man is playing with a baby	
+image vid1958: a dog is playing with a ball	
+image vid1959: a man is playing with a knife	
+image vid1960: a man is riding a horse	
+image vid1961: a man is riding a horse	
+image vid1962: a panda is eating	
+image vid1963: a boy is playing with a ball	
+image vid1964: a woman is putting a fish	
+image vid1965: a cat is playing with a ball	
+image vid1966: a man is riding a horse	
+image vid1967: a man is doing a man	
+image vid1968: a man is doing a man	
+image vid1969: a man is riding a bicycle	
+image vid1970: a man is playing with a ball	
+image vid1301: a man is playing with a ball	
+image vid1302: a man is riding a motorcycle	
+image vid1303: a cat is playing with a cat	
+image vid1304: a man is talking on a man	
+image vid1305: a man is running on a stage	
+image vid1306: a man is playing a gun	
+image vid1307: a woman is eating a piece of a knife	
+image vid1308: a man is doing a woman	
+image vid1309: a woman is eating her hair	
+image vid1310: a woman is slicing a potato	
+image vid1311: a cat is playing with a cat	
+image vid1312: a man is playing a guitar	
+image vid1313: a man is riding a horse	
+image vid1314: a man is running	
+image vid1315: a man is riding a car	
+image vid1316: a man is cutting a piece of a knife	
+image vid1317: a man is dancing	
+image vid1318: a man is dancing	
+image vid1319: a man is riding a horse	
+image vid1320: a man is playing a guitar	
+image vid1321: a man is playing with a ball	
+image vid1322: a person is slicing a potato	
+image vid1323: a man is playing a guitar	
+image vid1324: a dog is playing with a ball	
+image vid1325: a man is doing a car	
+image vid1326: a man is riding a car	
+image vid1327: a dog is playing with a dog	
+image vid1328: a woman is cooking a bowl	
+image vid1329: a man is running	
+image vid1330: a man is talking on a phone	
+image vid1331: a man is playing a ball	
+image vid1332: a man is riding a horse	
+image vid1333: a man is cutting a man	
+image vid1334: a man is slicing a potato	
+tokenization ...
+setting up scorers ...
+computing Bleu score ...
+{'reflen': 4090, 'guess': [4098, 3428, 2758, 2088], 'testlen': 4098, 'correct': [3093, 1685, 931, 396]}
+ratio: 1.00195599022
+Bleu_1: 0.755
+Bleu_2: 0.609
+Bleu_3: 0.500
+Bleu_4: 0.393
+computing METEOR score ...
+METEOR: 0.304
+computing Rouge score ...
+ROUGE_L: 0.671
+computing CIDEr score ...
+CIDEr: 0.586
+saving checkpoint to checkpoints/170929-1513_double_state_attention_just_test_2.t7	
+0.30443238425821	
+have done...	
+740 (epoch 2-46759), train_loss = 3.15607106,dis_loss = 0.00000000, grad/param norm = 6.9499e-04, time/batch = 0.3814s	
+750 (epoch 2-46759), train_loss = 3.11261332,dis_loss = 0.00000000, grad/param norm = 7.1587e-04, time/batch = 0.3289s	
+760 (epoch 2-46759), train_loss = 3.46960927,dis_loss = 0.00000000, grad/param norm = 7.4375e-04, time/batch = 0.3409s	
+770 (epoch 2-46759), train_loss = 3.18808159,dis_loss = 0.00000000, grad/param norm = 6.8765e-04, time/batch = 0.3634s	
+780 (epoch 2-46759), train_loss = 3.47098314,dis_loss = 0.00000000, grad/param norm = 7.0688e-04, time/batch = 0.3962s	
+790 (epoch 2-46759), train_loss = 3.37999376,dis_loss = 0.00000000, grad/param norm = 6.9381e-04, time/batch = 0.3513s	
+800 (epoch 2-46759), train_loss = 3.10129867,dis_loss = 0.00000000, grad/param norm = 7.1388e-04, time/batch = 0.3382s	
+810 (epoch 2-46759), train_loss = 2.96625239,dis_loss = 0.00000000, grad/param norm = 6.7010e-04, time/batch = 0.3312s	
+820 (epoch 2-46759), train_loss = 2.95674537,dis_loss = 0.00000000, grad/param norm = 7.1437e-04, time/batch = 0.2887s	
+830 (epoch 2-46759), train_loss = 3.22899402,dis_loss = 0.00000000, grad/param norm = 7.3813e-04, time/batch = 0.2971s	
+840 (epoch 2-46759), train_loss = 3.57129253,dis_loss = 0.00000000, grad/param norm = 7.3728e-04, time/batch = 0.3349s	
+850 (epoch 2-46759), train_loss = 3.23075188,dis_loss = 0.00000000, grad/param norm = 7.3885e-04, time/batch = 0.3141s	
+860 (epoch 2-46759), train_loss = 2.95959021,dis_loss = 0.00000000, grad/param norm = 7.0448e-04, time/batch = 0.2940s	
+870 (epoch 2-46759), train_loss = 3.43970745,dis_loss = 0.00000000, grad/param norm = 7.3537e-04, time/batch = 0.3339s	
+880 (epoch 2-46759), train_loss = 3.42301719,dis_loss = 0.00000000, grad/param norm = 7.2938e-04, time/batch = 0.2964s	
+890 (epoch 2-46759), train_loss = 2.90122672,dis_loss = 0.00000000, grad/param norm = 7.0515e-04, time/batch = 0.3505s	
+900 (epoch 2-46759), train_loss = 3.15674301,dis_loss = 0.00000000, grad/param norm = 7.1576e-04, time/batch = 0.2978s	
+910 (epoch 2-46759), train_loss = 3.00101663,dis_loss = 0.00000000, grad/param norm = 7.2426e-04, time/batch = 0.2936s	
+920 (epoch 2-46759), train_loss = 3.09456556,dis_loss = 0.00000000, grad/param norm = 7.0916e-04, time/batch = 0.2926s	
+930 (epoch 2-46759), train_loss = 3.18888034,dis_loss = 0.00000000, grad/param norm = 7.1757e-04, time/batch = 0.2862s	
+940 (epoch 2-46759), train_loss = 3.40863861,dis_loss = 0.00000000, grad/param norm = 7.6936e-04, time/batch = 0.2953s	
+950 (epoch 2-46759), train_loss = 3.14507149,dis_loss = 0.00000000, grad/param norm = 7.0330e-04, time/batch = 0.2854s	
+960 (epoch 2-46759), train_loss = 3.17221101,dis_loss = 0.00000000, grad/param norm = 7.2862e-04, time/batch = 0.2810s	
+970 (epoch 2-46759), train_loss = 3.35931496,dis_loss = 0.00000000, grad/param norm = 7.3201e-04, time/batch = 0.3280s	
+980 (epoch 2-46759), train_loss = 3.00389884,dis_loss = 0.00000000, grad/param norm = 7.2931e-04, time/batch = 0.2845s	
+990 (epoch 2-46759), train_loss = 2.72509158,dis_loss = 0.00000000, grad/param norm = 7.0908e-04, time/batch = 0.2892s	
+1000 (epoch 2-46759), train_loss = 3.19262100,dis_loss = 0.00000000, grad/param norm = 7.3606e-04, time/batch = 0.2960s	
+1010 (epoch 2-46759), train_loss = 3.29731499,dis_loss = 0.00000000, grad/param norm = 7.2938e-04, time/batch = 0.3021s	
+1020 (epoch 2-46759), train_loss = 3.18677849,dis_loss = 0.00000000, grad/param norm = 7.5579e-04, time/batch = 0.3347s	
+1030 (epoch 2-46759), train_loss = 3.24726571,dis_loss = 0.00000000, grad/param norm = 7.4819e-04, time/batch = 0.3341s	
+1040 (epoch 2-46759), train_loss = 2.90906345,dis_loss = 0.00000000, grad/param norm = 7.0093e-04, time/batch = 0.2815s	
+1050 (epoch 2-46759), train_loss = 3.20543996,dis_loss = 0.00000000, grad/param norm = 7.1881e-04, time/batch = 0.3242s	
+1060 (epoch 2-46759), train_loss = 3.07082814,dis_loss = 0.00000000, grad/param norm = 7.6065e-04, time/batch = 0.2846s	
+1070 (epoch 2-46759), train_loss = 2.80992355,dis_loss = 0.00000000, grad/param norm = 7.0795e-04, time/batch = 0.3691s	
+1080 (epoch 2-46759), train_loss = 3.33606307,dis_loss = 0.00000000, grad/param norm = 7.6160e-04, time/batch = 0.2950s	
+1090 (epoch 2-46759), train_loss = 2.97007938,dis_loss = 0.00000000, grad/param norm = 7.2336e-04, time/batch = 0.2903s	
+1100 (epoch 2-46759), train_loss = 2.88923285,dis_loss = 0.00000000, grad/param norm = 7.0378e-04, time/batch = 0.2965s	
+1110 (epoch 2-46759), train_loss = 3.13796231,dis_loss = 0.00000000, grad/param norm = 7.3413e-04, time/batch = 0.2950s	
+1120 (epoch 2-46759), train_loss = 3.03459652,dis_loss = 0.00000000, grad/param norm = 7.3686e-04, time/batch = 0.3107s	
+1130 (epoch 2-46759), train_loss = 3.04727317,dis_loss = 0.00000000, grad/param norm = 7.3601e-04, time/batch = 0.3372s	
+1140 (epoch 2-46759), train_loss = 2.87895493,dis_loss = 0.00000000, grad/param norm = 7.2917e-04, time/batch = 0.3435s	
+1150 (epoch 2-46759), train_loss = 3.11514251,dis_loss = 0.00000000, grad/param norm = 7.4124e-04, time/batch = 0.2952s	
+1160 (epoch 2-46759), train_loss = 2.74154359,dis_loss = 0.00000000, grad/param norm = 7.4902e-04, time/batch = 0.3340s	
+1170 (epoch 2-46759), train_loss = 2.94636521,dis_loss = 0.00000000, grad/param norm = 7.4410e-04, time/batch = 0.3189s	
+1180 (epoch 2-46759), train_loss = 2.97727096,dis_loss = 0.00000000, grad/param norm = 7.4563e-04, time/batch = 0.3039s	
+1190 (epoch 2-46759), train_loss = 3.12783506,dis_loss = 0.00000000, grad/param norm = 7.3423e-04, time/batch = 0.2936s	
+1200 (epoch 2-46759), train_loss = 3.26851940,dis_loss = 0.00000000, grad/param norm = 7.7487e-04, time/batch = 0.3012s	
+1210 (epoch 2-46759), train_loss = 3.07418072,dis_loss = 0.00000000, grad/param norm = 7.1372e-04, time/batch = 0.3102s	
+1220 (epoch 2-46759), train_loss = 3.06120684,dis_loss = 0.00000000, grad/param norm = 7.2559e-04, time/batch = 0.2996s	
+1230 (epoch 2-46759), train_loss = 3.30583988,dis_loss = 0.00000000, grad/param norm = 7.5692e-04, time/batch = 0.3041s	
+1240 (epoch 2-46759), train_loss = 2.95940585,dis_loss = 0.00000000, grad/param norm = 7.2593e-04, time/batch = 0.2928s	
+1250 (epoch 2-46759), train_loss = 3.06535479,dis_loss = 0.00000000, grad/param norm = 7.5781e-04, time/batch = 0.3236s	
+1260 (epoch 2-46759), train_loss = 3.00390311,dis_loss = 0.00000000, grad/param norm = 7.3298e-04, time/batch = 0.3226s	
+1270 (epoch 2-46759), train_loss = 2.80758569,dis_loss = 0.00000000, grad/param norm = 7.0178e-04, time/batch = 0.3171s	
+1280 (epoch 2-46759), train_loss = 3.08266010,dis_loss = 0.00000000, grad/param norm = 7.6405e-04, time/batch = 0.3299s	
+1290 (epoch 2-46759), train_loss = 2.98781019,dis_loss = 0.00000000, grad/param norm = 7.3705e-04, time/batch = 0.2952s	
+1300 (epoch 2-46759), train_loss = 2.95506643,dis_loss = 0.00000000, grad/param norm = 7.2368e-04, time/batch = 0.3856s	
+1310 (epoch 2-46759), train_loss = 2.82123639,dis_loss = 0.00000000, grad/param norm = 7.0117e-04, time/batch = 0.4549s	
+1320 (epoch 2-46759), train_loss = 3.05570015,dis_loss = 0.00000000, grad/param norm = 7.2827e-04, time/batch = 0.3824s	
+1330 (epoch 2-46759), train_loss = 2.65188763,dis_loss = 0.00000000, grad/param norm = 7.3215e-04, time/batch = 0.3975s	
+1340 (epoch 2-46759), train_loss = 2.98933292,dis_loss = 0.00000000, grad/param norm = 7.4849e-04, time/batch = 0.5667s	
+1350 (epoch 2-46759), train_loss = 2.87496193,dis_loss = 0.00000000, grad/param norm = 7.2550e-04, time/batch = 0.4554s	
+1360 (epoch 2-46759), train_loss = 2.96342839,dis_loss = 0.00000000, grad/param norm = 7.1135e-04, time/batch = 0.2990s	
+1370 (epoch 2-46759), train_loss = 3.27060863,dis_loss = 0.00000000, grad/param norm = 7.6113e-04, time/batch = 0.3449s	
+1380 (epoch 2-46759), train_loss = 3.07195466,dis_loss = 0.00000000, grad/param norm = 7.4032e-04, time/batch = 0.4116s	
+1390 (epoch 2-46759), train_loss = 3.03303823,dis_loss = 0.00000000, grad/param norm = 7.5506e-04, time/batch = 0.2934s	
+1400 (epoch 2-46759), train_loss = 2.71233853,dis_loss = 0.00000000, grad/param norm = 7.2035e-04, time/batch = 0.2964s	
+1410 (epoch 2-46759), train_loss = 3.24730611,dis_loss = 0.00000000, grad/param norm = 7.4243e-04, time/batch = 0.3494s	
+1420 (epoch 2-46759), train_loss = 2.82459396,dis_loss = 0.00000000, grad/param norm = 6.8766e-04, time/batch = 0.3400s	
+1430 (epoch 2-46759), train_loss = 2.72834527,dis_loss = 0.00000000, grad/param norm = 7.1384e-04, time/batch = 0.3064s	
+1440 (epoch 2-46759), train_loss = 2.85745051,dis_loss = 0.00000000, grad/param norm = 7.2172e-04, time/batch = 0.3308s	
+1450 (epoch 2-46759), train_loss = 2.92399422,dis_loss = 0.00000000, grad/param norm = 7.2727e-04, time/batch = 0.4298s	
+1460 (epoch 2-46759), train_loss = 3.12317599,dis_loss = 0.00000000, grad/param norm = 7.3309e-04, time/batch = 0.4293s	
+train data is shuffled...	
+image vid1301: a dog is playing with a dog	
+image vid1302: a man is riding a motorcycle	
+image vid1303: a cat is playing with a cat	
+image vid1304: a man is talking	
+image vid1305: a baby is walking in the water	
+image vid1306: a man is putting a gun	
+image vid1307: a woman is applying makeup	
+image vid1308: a man is dancing	
+image vid1309: a baby is dancing	
+image vid1310: a woman is peeling a potato	
+image vid1311: a cat is playing with a cat	
+image vid1312: a man is dancing	
+image vid1313: a man is riding a horse	
+image vid1314: a man is running	
+image vid1315: a man is riding a car	
+image vid1316: a man is cutting a paper	
+image vid1317: a woman is dancing	
+image vid1318: a man is dancing	
+image vid1319: a man is riding a horse	
+image vid1320: a man is playing a guitar	
+image vid1321: a man is playing with a ball	
+image vid1322: a woman is slicing a potato	
+image vid1323: a man is playing a guitar	
+image vid1324: a dog is playing with a dog	
+image vid1325: a man is doing a car	
+image vid1326: a man is shooting a car	
+image vid1327: a dog is playing with a dog	
+image vid1328: a woman is mixing a bowl	
+image vid1329: a man is running	
+image vid1330: a man is talking on a phone	
+image vid1331: a man is playing	
+image vid1332: a man is riding a horse	
+image vid1333: a man is doing a man	
+image vid1334: a man is cutting a potato	
+image vid1335: a monkey is walking	
+image vid1336: a polar bear is walking	
+image vid1337: a dog is walking on the beach	
+image vid1338: a man is playing a guitar	
+image vid1339: a man is riding a horse	
+image vid1340: a cat is playing with a toy	
+image vid1341: a man is riding a horse	
+image vid1342: a man is slicing a bread	
+image vid1343: a man is cutting a piece of meat	
+image vid1344: a man is cutting a piece of meat	
+image vid1345: a man is cutting a piece of bread	
+image vid1346: a car is driving a car	
+image vid1347: a man is doing a floor	
+image vid1348: a man is playing with a knife	
+image vid1349: a man is playing with a knife	
+image vid1350: a man is cutting a piece of bread	
+image vid1351: a man is walking	
+image vid1352: a cat is playing with a dog	
+image vid1353: a man is playing a guitar	
+image vid1354: a man is playing a guitar	
+image vid1355: a man is riding a horse	
+image vid1356: a man is playing a piano	
+image vid1357: a car is driving a car	
+image vid1358: a man is running	
+image vid1359: a dog is running	
+image vid1360: a man is riding a boat	
+image vid1361: a man is putting a piece of a box	
+image vid1362: a man is shooting a gun	
+image vid1363: a cat is eating	
+image vid1364: a man is running	
+image vid1365: a group of people are dancing	
+image vid1366: a man is walking	
+image vid1367: a man is playing a guitar	
+image vid1368: a woman is doing a man	
+image vid1369: a woman is peeling a potato	
+image vid1370: a man is pouring oil into a bowl	
+image vid1371: a man is playing with a toy	
+image vid1372: a man is running	
+image vid1373: a man is talking on a phone	
+image vid1374: a man is pouring oil into a pot	
+image vid1375: a man is cooking	
+image vid1376: a man is pouring sauce into a pot	
+image vid1377: a man is pouring sauce into a pot	
+image vid1378: a man is cutting a piece of a bowl	
+image vid1379: a man is cooking some meat	
+image vid1380: a man is putting a piece of a piece of a box	
+image vid1381: a man is eating a piece of a bowl	
+image vid1382: two men are dancing	
+image vid1383: a woman is doing a pool	
+image vid1384: a woman is pouring a bowl	
+image vid1385: a boy is dancing	
+image vid1386: a man is playing with a ball	
+image vid1387: a man is playing with a dog	
+image vid1388: a man is playing with a knife	
+image vid1389: a baby is playing with a toy	
+image vid1390: a dog is playing with a ball	
+image vid1391: a woman is peeling a potato	
+image vid1392: a woman is eating a fish	
+image vid1393: a man is running	
+image vid1394: a puppy is playing with a ball	
+image vid1395: a man is playing a piano	
+image vid1396: a group of people are playing	
+image vid1397: a dog is playing	
+image vid1398: a man is playing with a sword	
+image vid1399: a panda is playing with a toy	
+image vid1400: a man is playing a guitar	
+image vid1401: a woman is riding a horse	
+image vid1402: a boy is playing the guitar	
+image vid1403: a man is playing a guitar	
+image vid1404: a man is playing with a ball	
+image vid1405: a man is eating something	
+image vid1406: a woman is pouring a pot	
+image vid1407: a cat is licking a piece of a piece of a bowl	
+image vid1408: a man is talking on the phone	
+image vid1409: a woman is applying her hair	
+image vid1410: a man is slicing a potato	
+image vid1411: a man is riding a horse	
+image vid1412: a man is dancing	
+image vid1413: a baby is playing with a toy	
+image vid1414: a dog is running	
+image vid1415: a man is driving a car	
+image vid1416: a cat is playing with a ball	
+image vid1417: a man is doing a tree	
+image vid1418: a cat is walking	
+image vid1419: a man is dancing	
+image vid1420: a woman is slicing a cucumber	
+image vid1421: a man is cooking his kichen	
+image vid1422: a cat is playing with a cat	
+image vid1423: a woman is cutting a paper	
+image vid1424: a man is riding a horse	
+image vid1425: a man is riding a bicycle	
+image vid1426: a woman is cooking	
+image vid1427: a man is running	
+image vid1428: a woman is cutting a plastic	
+image vid1429: a woman is slicing a potato	
+image vid1430: a woman is slicing a carrot	
+image vid1431: a man is cutting a potato	
+image vid1432: a dog is playing with a ball	
+image vid1433: a puppy is playing with a ball	
+image vid1434: a man is playing a piano	
+image vid1435: a man is walking	
+image vid1436: a man is walking	
+image vid1437: a man is cutting a potato	
+image vid1438: a car is driving a car	
+image vid1439: a man is playing with a toy	
+image vid1440: a man is riding a beach	
+image vid1441: a woman is peeling a fish	
+image vid1442: a man is pouring oil into a bowl	
+image vid1443: a man is talking	
+image vid1444: a man is cutting a fish	
+image vid1445: a woman is slicing a carrot	
+image vid1446: a man is walking	
+image vid1447: a man is riding a horse	
+image vid1448: a dog is riding a horse	
+image vid1449: a woman is playing with a ball	
+image vid1450: a man is running	
+image vid1451: a man is cutting a gun	
+image vid1452: a man is riding a horse	
+image vid1453: a man is playing with a ball	
+image vid1454: a man is riding a motorcycle	
+image vid1455: a man is playing with a ball	
+image vid1456: a man is running	
+image vid1457: a man is running	
+image vid1458: a man is cooking	
+image vid1459: a woman is washing her hair	
+image vid1460: a man is playing a guitar	
+image vid1461: a baby is playing with a ball	
+image vid1462: a dog is playing with a dog	
+image vid1463: a man is riding a bike	
+image vid1464: a man is swimming in the water	
+image vid1465: a man is playing a guitar	
+image vid1466: a man is walking on a man	
+image vid1467: a man is shooting a gun	
+image vid1468: a woman is cutting a piece of a bowl	
+image vid1469: a man is cooking some meat	
+image vid1470: a woman is cutting a potato	
+image vid1471: a man is playing a guitar	
+image vid1472: a person is slicing a potato	
+image vid1473: a baby is playing with a toy	
+image vid1474: a woman is dancing	
+image vid1475: a rabbit is eating	
+image vid1476: a man is riding a horse	
+image vid1477: a man is running down a car	
+image vid1478: a man is cutting a piece of meat	
+image vid1479: a person is cutting a piece of a knife	
+image vid1480: a woman is cutting a piece of meat	
+image vid1481: a woman is cutting a piece of meat	
+image vid1482: a woman is cutting a piece of meat	
+image vid1483: a woman is slicing a carrot	
+image vid1484: a woman is cutting a piece of meat	
+image vid1485: a woman is cooking	
+image vid1486: a woman is cooking	
+image vid1487: a person is cooking	
+image vid1488: a woman is cooking	
+image vid1489: a woman is cutting a carrot	
+image vid1490: a person is cooking	
+image vid1491: a woman is slicing a carrot	
+image vid1492: a person is cooking	
+image vid1493: a woman is slicing a carrot	
+image vid1494: a woman is slicing a carrot	
+image vid1495: a woman is slicing a carrot	
+image vid1496: a woman is slicing a bowl	
+image vid1497: a woman is adding some eggs	
+image vid1498: a woman is slicing a cucumber	
+image vid1499: a woman is slicing a fish	
+image vid1500: a man is cooking his kichen	
+image vid1501: a man is riding a motorcycle	
+image vid1502: a man is playing with a man	
+image vid1503: a woman is cutting a potato	
+image vid1504: a woman is cutting a meat	
+image vid1505: a woman is slicing a piece of meat	
+image vid1506: a woman is cooking some meat	
+image vid1507: a woman is cutting a piece of meat	
+image vid1508: a woman is cooking	
+image vid1509: a man is riding a bicycle	
+image vid1510: a man is pouring eggs into a bowl	
+image vid1511: a man is cutting a bowl	
+image vid1512: a man is eating a piece of a box	
+image vid1513: a man is playing with a knife	
+image vid1514: a man is riding a man	
+image vid1515: a man is talking	
+image vid1516: a man is playing a guitar	
+image vid1517: a dog is playing with a dog	
+image vid1518: a woman is doing a piece of a paper	
+image vid1519: a man is riding a bicycle	
+image vid1520: a woman is dancing	
+image vid1521: a woman is dancing	
+image vid1522: a man is shooting a gun	
+image vid1523: a woman is riding a horse	
+image vid1524: a woman is playing with a ball	
+image vid1525: a cat is playing with a ball	
+image vid1526: a group of people are playing	
+image vid1527: a man is playing a flute	
+image vid1528: a man is playing a guitar	
+image vid1529: a man is talking on the phone	
+image vid1530: a woman is cutting meat	
+image vid1531: a man is running	
+image vid1532: a dog is running	
+image vid1533: a man is talking on a phone	
+image vid1534: a man is putting a chicken	
+image vid1535: a man is cutting a piece of meat	
+image vid1536: a man is pouring a bowl of a bowl	
+image vid1537: a man is shooting a gun	
+image vid1538: a man is playing with a monkey	
+image vid1539: a man is dancing	
+image vid1540: a man is walking	
+image vid1541: a man is riding a bike	
+image vid1542: a woman is cutting a piece of a piece of a knife	
+image vid1543: a man is playing with a toy	
+image vid1544: a man is playing a guitar	
+image vid1545: a man is riding a horse	
+image vid1546: a man is putting a pan	
+image vid1547: a man is cutting a potato	
+image vid1548: a man is cutting a potato	
+image vid1549: a man is cutting a potato	
+image vid1550: a woman is cutting a potato	
+image vid1551: a man is slicing a carrot	
+image vid1552: a person is cutting a carrot	
+image vid1553: a woman is slicing a potato	
+image vid1554: a woman is cutting a potato	
+image vid1555: a woman is slicing a potato	
+image vid1556: a man is doing a gun	
+image vid1557: a woman is putting a gun	
+image vid1558: a woman is cooking eggs	
+image vid1559: a boy is playing soccer	
+image vid1560: a dog is playing	
+image vid1561: a woman is slicing a potato	
+image vid1562: a person is slicing a potato	
+image vid1563: a dog is playing with a ball	
+image vid1564: two men are fighting	
+image vid1565: a man is riding a motorcycle	
+image vid1566: a man is playing guitar	
+image vid1567: a man is walking	
+image vid1568: a man is cooking his kichen	
+image vid1569: a man is cutting a carrot	
+image vid1570: a man is walking	
+image vid1571: two men are fighting	
+image vid1572: a man is riding a horse	
+image vid1573: a man is riding a motorcycle	
+image vid1574: a man is riding a motorcycle	
+image vid1575: a man is cutting a piece of bread	
+image vid1576: a man is riding a bike	
+image vid1577: a woman is cooking a pan	
+image vid1578: a man is cutting a carrot	
+image vid1579: a man is playing a violin	
+image vid1580: a man is playing a guitar	
+image vid1581: a man is talking on a phone	
+image vid1582: a woman is doing a woman	
+image vid1583: a man is cutting a potato	
+image vid1584: a man is riding a motorcycle	
+image vid1585: a person is cooking	
+image vid1586: a man is playing with a ball	
+image vid1587: a cat is playing with a toy	
+image vid1588: a woman is singing	
+image vid1589: a dog is playing with a ball	
+image vid1590: a man is playing a guitar	
+image vid1591: a man is playing with a sword	
+image vid1592: a dog is playing with a dog	
+image vid1593: a baby is playing with a toy	
+image vid1594: a cat is playing with a toy	
+image vid1595: a dog is playing with a ball	
+image vid1596: a man is cooking some meat	
+image vid1597: a man is cutting a piece of bread	
+image vid1598: a woman is cutting a piece of bread	
+image vid1599: a man is cutting a piece of bread	
+image vid1600: a man is shooting a gun	
+image vid1601: a man is running	
+image vid1602: a man is riding a horse	
+image vid1603: a man is dancing	
+image vid1604: a woman is talking on a phone	
+image vid1605: a man is cutting a fish	
+image vid1606: a dog is eating	
+image vid1607: a man is cutting a paper	
+image vid1608: a dog is playing with a ball	
+image vid1609: a boy is playing with a ball	
+image vid1610: a woman is peeling a potato	
+image vid1611: a woman is dancing	
+image vid1612: a man is riding a bike	
+image vid1613: a woman is cutting a bowl	
+image vid1614: a woman is cutting a bowl	
+image vid1615: a man is slicing a potato	
+image vid1616: a man is slicing a potato	
+image vid1617: a man is cooking his kichen	
+image vid1618: a woman is playing with a dog	
+image vid1619: a dog is riding a horse	
+image vid1620: a man is shooting a gun	
+image vid1621: a man is running	
+image vid1622: a man is putting a woman is putting a bowl	
+image vid1623: a man is riding a bike	
+image vid1624: a man is running	
+image vid1625: a man is dancing	
+image vid1626: a person is cutting a potato	
+image vid1627: a person is cutting a potato	
+image vid1628: a woman is doing a woman	
+image vid1629: a man is riding a motorcycle	
+image vid1630: a man is playing a guitar	
+image vid1631: a woman is applying a cigarette	
+image vid1632: a man is doing a carrot	
+image vid1633: a man is riding a bicycle	
+image vid1634: a man is playing a flute	
+image vid1635: a group of people are dancing	
+image vid1636: a man is pouring water into a pot	
+image vid1637: a man is cooking	
+image vid1638: a person is cooking some meat	
+image vid1639: two men are playing	
+image vid1640: a man is running	
+image vid1641: a dog is riding a horse	
+image vid1642: a man is riding a horse	
+image vid1643: a woman is running	
+image vid1644: a man is singing	
+image vid1645: a man is cutting a fish	
+image vid1646: a cat is playing with a dog	
+image vid1647: a man is riding a motorcycle	
+image vid1648: a girl is applying her hair	
+image vid1649: a cat is riding a horse	
+image vid1650: a dog is playing	
+image vid1651: a man is riding a horse	
+image vid1652: a man is playing with a field	
+image vid1653: a man is playing with a ball	
+image vid1654: a dog is playing with a ball	
+image vid1655: a man is running	
+image vid1656: a dog is playing with a ball	
+image vid1657: a man is cutting a chicken	
+image vid1658: a man is talking	
+image vid1659: a man is dancing	
+image vid1660: a woman is dancing	
+image vid1661: a man is running	
+image vid1662: a man is cutting a piece of a knife	
+image vid1663: a man is running	
+image vid1664: a man is pouring a bowl	
+image vid1665: a man is slicing a carrot	
+image vid1666: a man is slicing a carrot	
+image vid1667: a man is slicing a potato	
+image vid1668: a baby is playing with a toy	
+image vid1669: a man is playing a keyboard	
+image vid1670: a man is cutting a piece of meat	
+image vid1671: a man is riding a bicycle	
+image vid1672: a boy is playing with a ball	
+image vid1673: a man is playing a flute	
+image vid1674: a lion is playing	
+image vid1675: a woman is dancing	
+image vid1676: a boy is playing with a toy	
+image vid1677: a boy is playing with a toy	
+image vid1678: a panda is walking	
+image vid1679: a man is running	
+image vid1680: a woman is cutting a paper	
+image vid1681: a man is talking on a phone	
+image vid1682: a man is playing with a toy	
+image vid1683: a baby is laughing	
+image vid1684: a cat is drinking a cat	
+image vid1685: a man is playing with a man	
+image vid1686: a man is riding a motorcycle	
+image vid1687: a dog is playing with a ball	
+image vid1688: a boy is playing with a ball	
+image vid1689: a dog is playing with a ball	
+image vid1690: a woman is cooking eggs	
+image vid1691: two men are fighting	
+image vid1692: a baby is dancing	
+image vid1693: a man is riding a car	
+image vid1694: a man is dancing	
+image vid1695: a man is cooking his kichen	
+image vid1696: a cat is playing with a dog	
+image vid1697: a dog is walking on a dog	
+image vid1698: a cat is playing with a ball	
+image vid1699: a man is cooking his kichen	
+image vid1700: a woman is adding some eggs	
+image vid1701: a woman is cutting a piece of meat	
+image vid1702: a person is cooking	
+image vid1703: a woman is cutting a carrot	
+image vid1704: a woman is cutting a piece of meat	
+image vid1705: a woman is slicing a piece of bread	
+image vid1706: a woman is slicing a carrot	
+image vid1707: a man is doing a man	
+image vid1708: a man is playing a guitar	
+image vid1709: a woman is talking on a phone	
+image vid1710: a dog is playing with a dog	
+image vid1711: a man is riding a car	
+image vid1712: a man is riding a car	
+image vid1713: a dog is running	
+image vid1714: a man is playing a woman	
+image vid1715: a woman is peeling a potato	
+image vid1716: a woman is applying makeup	
+image vid1717: a woman is talking on a woman	
+image vid1718: a panda is playing	
+image vid1719: a man is talking	
+image vid1720: a man is eating a piece of a piece of a piece	
+image vid1721: a man is running	
+image vid1722: a man is cutting a piece of meat	
+image vid1723: a man is driving a car	
+image vid1724: a man is playing with a ball	
+image vid1725: a man is dancing	
+image vid1726: a woman is doing a bag	
+image vid1727: a man is doing a man	
+image vid1728: a man is shooting a gun	
+image vid1729: a man is doing a ball	
+image vid1730: a woman is doing exercise	
+image vid1731: a man is riding a bicycle	
+image vid1732: a man is dancing	
+image vid1733: a man is singing	
+image vid1734: a woman is playing a guitar	
+image vid1735: a man is walking down a man	
+image vid1736: a woman is eating a piece of a man	
+image vid1737: a man is doing a woman	
+image vid1738: a man is riding a horse	
+image vid1739: a man is playing with a toy	
+image vid1740: a man is riding a horse	
+image vid1741: a man is riding a bicycle	
+image vid1742: a man is cutting a piece of meat	
+image vid1743: a man is cutting a piece of bread	
+image vid1744: a man is playing the piano	
+image vid1745: a man is singing	
+image vid1746: a man is cutting a piece of bread	
+image vid1747: a woman is doing a woman	
+image vid1748: a cat is playing with a toy	
+image vid1749: a man is talking on a phone	
+image vid1750: two men are fighting	
+image vid1751: a man is cutting a potato	
+image vid1752: a man is slicing a potato	
+image vid1753: a man is doing a car	
+image vid1754: a man is riding a motorcycle	
+image vid1755: a man is talking on a phone	
+image vid1756: a woman is cutting a piece of a piece of a knife	
+image vid1757: a woman is washing a piece of a box	
+image vid1758: a man is dancing	
+image vid1759: a woman is doing a woman	
+image vid1760: a man is walking	
+image vid1761: a man is running	
+image vid1762: a train is running	
+image vid1763: a man is playing with a sword	
+image vid1764: a group of people are dancing	
+image vid1765: a man is cutting a potato	
+image vid1766: a man is cutting a gun	
+image vid1767: a man is doing a man	
+image vid1768: a man is playing a guitar	
+image vid1769: a man is talking on a phone	
+image vid1770: a man is cooking a bowl	
+image vid1771: a dog is running	
+image vid1772: a man is cutting a potato	
+image vid1773: a cat is playing with a toy	
+image vid1774: a man is talking on a phone	
+image vid1775: a man is slicing a carrot	
+image vid1776: a man is riding a horse	
+image vid1777: a man is playing with a sword	
+image vid1778: a cat is playing with a toy	
+image vid1779: a man is cooking a pan	
+image vid1780: a monkey is running	
+image vid1781: a man is walking on the beach	
+image vid1782: a man is talking	
+image vid1783: a monkey is walking	
+image vid1784: a man is dancing	
+image vid1785: a woman is talking	
+image vid1786: a woman is putting a bowl	
+image vid1787: a woman is slicing a tomato	
+image vid1788: a man is playing a guitar	
+image vid1789: a man is putting a pizza	
+image vid1790: a man is playing with a woman	
+image vid1791: a man is riding a horse	
+image vid1792: a man is riding a bike	
+image vid1793: a cat is playing with a toy	
+image vid1794: a woman is cooking	
+image vid1795: a woman is doing a ball	
+image vid1796: a man is playing a guitar	
+image vid1797: a man is riding a bicycle	
+image vid1798: a boy is playing with a toy	
+image vid1799: a cat is playing with a toy	
+image vid1800: a man is riding a horse	
+image vid1801: a woman is riding a horse	
+image vid1802: a man is cooking	
+image vid1803: a man is playing with a gun	
+image vid1804: a man is playing a piano	
+image vid1805: a man is shooting a gun	
+image vid1806: a woman is dancing	
+image vid1807: a monkey is walking	
+image vid1808: a car is driving a car	
+image vid1809: a woman is dancing	
+image vid1810: a person is cutting a small	
+image vid1811: a man is riding a bicycle	
+image vid1812: a man is running	
+image vid1813: a car is driving a car	
+image vid1814: a man is riding a horse	
+image vid1815: a man is walking	
+image vid1816: a woman is doing a swimming	
+image vid1817: a panda is playing with a panda	
+image vid1818: a man is cutting a piece of a knife	
+image vid1819: a man is playing with a man	
+image vid1820: a man is playing with a sword	
+image vid1821: a man is playing with a man	
+image vid1822: a cat is playing with a knife	
+image vid1823: a man is playing a guitar	
+image vid1824: a man is cutting a piece of a piece of a piece	
+image vid1825: a cat is playing with a toy	
+image vid1826: a man is riding a car	
+image vid1827: a man is cooking his kichen	
+image vid1828: a man is playing with a ball	
+image vid1829: a man is walking on a stage	
+image vid1830: a woman is dancing	
+image vid1831: a man is riding a horse	
+image vid1832: a man is running	
+image vid1833: a man is doing a sword	
+image vid1834: a man is playing a piano	
+image vid1835: a panda is walking	
+image vid1836: a man is cutting a piece of a piece of a plate	
+image vid1837: a woman is doing her hair	
+image vid1838: a dog is playing with a ball	
+image vid1839: a man is shooting a gun	
+image vid1840: a man is playing with a sword	
+image vid1841: a man is cutting a potato	
+image vid1842: a man is riding a bike	
+image vid1843: a man is playing a gun	
+image vid1844: a cat is playing with a cat	
+image vid1845: a zebras are running	
+image vid1846: a man is dancing	
+image vid1847: a man is walking	
+image vid1848: a plane is flying	
+image vid1849: a woman is slicing a potato	
+image vid1850: a woman is doing exercise	
+image vid1851: a woman is riding a horse	
+image vid1852: a man is riding a horse	
+image vid1853: a plane is flying	
+image vid1854: a dog is playing with a ball	
+image vid1855: a man is cutting a potato	
+image vid1856: a man is talking	
+image vid1857: a woman is putting a makeup	
+image vid1858: a man is playing a guitar	
+image vid1859: a man is playing a guitar	
+image vid1860: a man is doing a car	
+image vid1861: a man is riding a motorcycle	
+image vid1862: a woman is playing a flute	
+image vid1863: a dog is playing	
+image vid1864: a woman is cutting a pineapple	
+image vid1865: a baby is laughing	
+image vid1866: a man is swimming in the water	
+image vid1867: a man is talking on a phone	
+image vid1868: a man is playing with a ball	
+image vid1869: a woman is dancing	
+image vid1870: a man is walking	
+image vid1871: a man is doing a man	
+image vid1872: a man is cutting a tree	
+image vid1873: a man is playing with a sword	
+image vid1874: a boy is playing with a ball	
+image vid1875: a man is cutting a paper	
+image vid1876: a woman is slicing a cucumber	
+image vid1877: a woman is doing her hair	
+image vid1878: a man is cutting a man	
+image vid1879: a woman is doing exercise	
+image vid1880: a woman is playing with a toy	
+image vid1881: a man is doing a man	
+image vid1882: a man is walking on a pool	
+image vid1883: a man is playing a guitar	
+image vid1884: a cat is playing with a toy	
+image vid1885: a man is riding a bicycle	
+image vid1886: a plane is flying	
+image vid1887: a boy is running	
+image vid1888: a man is doing a rope	
+image vid1889: a man is playing a guitar	
+image vid1890: a man is slicing a potato	
+image vid1891: a woman is cooking eggs	
+image vid1892: a woman is dancing	
+image vid1893: a man is running	
+image vid1894: a man is running	
+image vid1895: a man is playing a guitar	
+image vid1896: a man is playing a guitar	
+image vid1897: a man is dancing	
+image vid1898: a man is riding a bike	
+image vid1899: a man is dancing	
+image vid1900: a man is riding a horse	
+image vid1901: a man is walking down a field	
+image vid1902: a man is walking	
+image vid1903: a man is walking on a rope	
+image vid1904: a woman is dancing	
+image vid1905: a man is riding a horse	
+image vid1906: a man is dancing	
+image vid1907: a man is cutting a paper	
+image vid1908: a person is cutting a fish	
+image vid1909: a monkey is playing with a monkey	
+image vid1910: a man is cutting a paper	
+image vid1911: a cat is playing with a toy	
+image vid1912: a woman is cooking	
+image vid1913: a cat is playing with a toy	
+image vid1914: a man is riding a horse	
+image vid1915: a dog is playing with a ball	
+image vid1916: a man is riding a horse	
+image vid1917: a woman is peeling a potato	
+image vid1918: a woman is riding a horse	
+image vid1919: a dog is playing with a ball	
+image vid1920: a dog is running	
+image vid1921: a man is driving a car	
+image vid1922: a man is playing with a ball	
+image vid1923: a man is playing with a ball	
+image vid1924: a man is talking	
+image vid1925: a cat is playing with a toy	
+image vid1926: a person is cutting a fish	
+image vid1927: a man is running	
+image vid1928: a woman is eating a bowl	
+image vid1929: a man is slicing a carrot	
+image vid1930: a man is cutting a carrot	
+image vid1931: a man is cutting a piece of bread	
+image vid1932: a man is playing with a dog	
+image vid1933: a man is cutting a potato	
+image vid1934: a man is playing a flute	
+image vid1935: a boy is playing with a ball	
+image vid1936: a man is slicing a potato	
+image vid1937: a group of people are dancing	
+image vid1938: a cat is playing with a dog	
+image vid1939: a man is cutting a paper	
+image vid1940: a man is playing the piano	
+image vid1941: a man is shooting a gun	
+image vid1942: a man is slicing a potato	
+image vid1943: a man is slicing a potato	
+image vid1944: a man is cutting a paper	
+image vid1945: a man is swimming in a pool	
+image vid1946: a man is doing a man	
+image vid1947: a man is riding a horse	
+image vid1948: a man is shooting a gun	
+image vid1949: a man is shooting a gun	
+image vid1950: a woman is riding a horse	
+image vid1951: a man is riding a horse	
+image vid1952: a man is pouring a bowl of a bowl	
+image vid1953: a woman is putting a woman is talking	
+image vid1954: a woman is putting a woman	
+image vid1955: a man is talking on a phone	
+image vid1956: a man is doing a man	
+image vid1957: a baby is playing	
+image vid1958: a dog is playing with a dog	
+image vid1959: a woman is talking on a phone	
+image vid1960: a man is riding a horse	
+image vid1961: a man is riding a horse	
+image vid1962: a panda is walking	
+image vid1963: a boy is playing with a ball	
+image vid1964: a woman is doing a fish	
+image vid1965: a cat is playing with a sword	
+image vid1966: a man is riding a horse	
+image vid1967: a man is doing a woman	
+image vid1968: a man is doing a man	
+image vid1969: a man is riding a bicycle	
+image vid1970: a man is playing with a sword	
+image vid1301: a dog is playing with a dog	
+image vid1302: a man is riding a motorcycle	
+image vid1303: a cat is playing with a cat	
+image vid1304: a man is talking	
+image vid1305: a baby is walking in the water	
+image vid1306: a man is putting a gun	
+image vid1307: a woman is applying makeup	
+image vid1308: a man is dancing	
+image vid1309: a baby is dancing	
+image vid1310: a woman is peeling a potato	
+image vid1311: a cat is playing with a cat	
+image vid1312: a man is dancing	
+image vid1313: a man is riding a horse	
+image vid1314: a man is running	
+image vid1315: a man is riding a car	
+image vid1316: a man is cutting a paper	
+image vid1317: a woman is dancing	
+image vid1318: a man is dancing	
+image vid1319: a man is riding a horse	
+image vid1320: a man is playing a guitar	
+image vid1321: a man is playing with a ball	
+image vid1322: a woman is slicing a potato	
+image vid1323: a man is playing a guitar	
+image vid1324: a dog is playing with a dog	
+image vid1325: a man is doing a car	
+image vid1326: a man is shooting a car	
+image vid1327: a dog is playing with a dog	
+image vid1328: a woman is mixing a bowl	
+image vid1329: a man is running	
+image vid1330: a man is talking on a phone	
+image vid1331: a man is playing	
+image vid1332: a man is riding a horse	
+image vid1333: a man is doing a man	
+image vid1334: a man is cutting a potato	
+tokenization ...
+setting up scorers ...
+computing Bleu score ...
+{'reflen': 3999, 'guess': [4016, 3346, 2676, 2006], 'testlen': 4016, 'correct': [3119, 1793, 1027, 459]}
+ratio: 1.00425106277
+Bleu_1: 0.777
+Bleu_2: 0.645
+Bleu_3: 0.543
+Bleu_4: 0.437
+computing METEOR score ...
+METEOR: 0.316
+computing Rouge score ...
+ROUGE_L: 0.684
+computing CIDEr score ...
+CIDEr: 0.646
+saving checkpoint to checkpoints/170929-1513_double_state_attention_just_test_3.t7	
+0.3164021649356	
+have done...	
+1470 (epoch 3-46759), train_loss = 3.01118935,dis_loss = 0.00000000, grad/param norm = 7.2574e-04, time/batch = 0.4166s	
+1480 (epoch 3-46759), train_loss = 2.88445533,dis_loss = 0.00000000, grad/param norm = 7.4124e-04, time/batch = 0.3984s	
+1490 (epoch 3-46759), train_loss = 2.78388581,dis_loss = 0.00000000, grad/param norm = 7.0927e-04, time/batch = 0.3867s	
+1500 (epoch 3-46759), train_loss = 2.76197338,dis_loss = 0.00000000, grad/param norm = 7.2451e-04, time/batch = 0.3509s	
+ th train_dual_memory_model.lua -checkpoint_dir checkpoints -max_epochs 80   -label_file /home/yzw/dataset/Youtube/feature/new_lv/labels_1th.npy -input_h5 /home/yzw/dataset/Youtube/new_feat/googlenet-pl5-10f-new.h5 -input_json /home/yzw/dataset/Youtube/feature/new_lv/info_1th.json   -input_h5_local /home/yzw/dataset/Youtube/new_feat/googlenet-in5b-10f-new.h5   -gpuid 0 -learningRate 2e-4 -dropout 0.5 -grad_clip 10 -learning_rate_decay_every 20 -add_supervision 0   -batchsize 64 -hiddensize 512 -eval_every 100  -flag double_state_attention_just_test
