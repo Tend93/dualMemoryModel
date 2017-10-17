@@ -69,22 +69,19 @@ function DataLoader:__init(opt)
   -- from word distribution ...
   print('preparing word distribution')
   for i=1, self.num_videos do
+    local tp_ix = 1
     for j=1, self.seq_length do
         local tp = self.labels[i][j]
         if tp ~= 0 then
-          self.topics[i][tp] = 1
+          self.topics[i][tp_ix] = tp
+          tp_ix = tp_ix+1
         end
     end
   end 
 
   print('word distribution samples')
-  --print(self.topics[1])
-  -- local topics_rank_ix
-  -- _, topics_rank_ix = torch.sort(self.topics_raw, 2, true)
-  -- self.topics = torch.LongTensor(self.num_videos, self.topic_size):zero()
-  -- self.topics[{{1, self.num_videos},{1,top_k_topic}}] = topics_rank_ix[{{1,self.num_videos},{1,top_k_topic}}]
-  -- assert(self.topics[1][top_k_topic+1] == 0, 'topic info wrong')
-  -- separate out indexes for each of the provided splits
+  print(self.topics[1])
+
   self.split_ix = {}
   self.iterators = {}
   self.shuffle_all = {}

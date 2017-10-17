@@ -204,7 +204,7 @@ function LSTM_tools.lstm_soft_att_double_state_out(opt)
     local topic_size = opt.topic_size
     local att_hid_size = opt.att_hid_size
     local att_type = opt.att_type or 3
-    print('.......................LSTM Soft Attention with Double State Out_topic_feat parameters..............')
+    print('.......................LSTM Soft Attention with Double State Out_topic_semantic parameters..............')
     print(opt)
     local inputs = {}
     local outputs = {}
