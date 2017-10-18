@@ -65,15 +65,27 @@ function DataLoader:__init(opt)
   --self.topics_raw = self.labels
   --self.topic_size = self.topics_raw:size(2)
   self.topic_size = self.vocab_size
+  self.topics_pre = torch.LongTensor(self.num_videos, self.topic_size)
   self.topics = torch.LongTensor(self.num_videos, self.topic_size)
   -- from word distribution ...
   print('preparing word distribution')
+
+  for i=1, seq_size[1] do
+    local vd_ix = self.list[tostring(i)]
+    for j=1, self.seq_length do
+      local word_ix = self.labels[i][j]
+      if word_ix ~= 0 then
+     	 self.topics_pre[vd_ix][word_ix]=1
+      end
+    end
+  end
+
   for i=1, self.num_videos do
     local tp_ix = 1
-    for j=1, self.seq_length do
-        local tp = self.labels[i][j]
-        if tp ~= 0 then
-          self.topics[i][tp_ix] = tp
+    for j=1, self.topic_size do
+        local tp = self.topics_pre[i][j]
+        if tp == 1 then
+          self.topics[i][tp_ix] = j
           tp_ix = tp_ix+1
         end
     end
